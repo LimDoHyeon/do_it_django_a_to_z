@@ -6,6 +6,8 @@ class Post(models.Model):
     content = models.TextField()
 
     head_image = models.ImageField(upload_to='blog/images/%Y/%m/%d/', blank=True) #연도, 월, 일 폴더까지 내려간 위치에 저장하도록 설정
+    file_upload = models.FileField(upload_to='blog/files/%Y/%m/%d/', blank=True)
+
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     #author : 추후 작성 예정
