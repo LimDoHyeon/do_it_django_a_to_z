@@ -4,6 +4,7 @@ import os
 # Create your models here.
 class Post(models.Model):
     title = models.CharField(max_length=30)
+    hook_text = models.CharField(max_length=100, blank=True)
     content = models.TextField()
 
     head_image = models.ImageField(upload_to='blog/images/%Y/%m/%d/', blank=True) #연도, 월, 일 폴더까지 내려간 위치에 저장하도록 설정
